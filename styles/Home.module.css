@@ -29,8 +29,122 @@
 }
 .sectionCaption {
   margin-bottom: 1.5rem;
+  max-width: 450px;
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background-color: #f5f5fa;
+}
+
+.menu {
+  background-color: #fefeef;
+}
+.menus {
+  margin-bottom: 40px;
+}
+.menuList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.menuDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menuTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.menuDesc {
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+}
+.menuPrice {
+  font-size: 14px;
+}
+
+.featureImages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featureImage {
+  margin: 0.5rem 0;
+}
+
+.contactBtn {
+  outline: none;
+  border: none;
+  padding: 12px 40px;
+  background-color: #ef717a;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contactBtn:hover {
+  background-color: #d65861;
+}
+
+.bigImage {
+  display: block;
+}
+.footer {
+  text-align: center;
+  background-color: #f5f5fa;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .leading {
+    position: relative;
+  }
+  .leadingText {
+    z-index: 10;
+    position: absolute;
+    top: 45%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  .leadingTitle {
+    font-size: 4.5rem;
+  }
+  .leadingCaption {
+    transform: translate(30%, 0%);
+  }
+
+  .about {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+  }
+  .menuList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .featureImages {
+    flex-direction: row;
+  }
+  .featureImage {
+    margin: 0 0.5rem;
+  }
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+  }
+  .developer {
+    grid-area: 2 / 2 / 3 / 3;
+  }
 }
